@@ -1,0 +1,26 @@
+echo "Setting up VSCode and installing extensions..."
+
+# Install Visual Studio Code CLI
+ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/local/bin/code
+
+# Install Visual Studio Code Extensions
+code --install-extension bmewburn.vscode-intelephense-client \
+    && code --install-extension bradlc.vscode-tailwindcss \
+    && code --install-extension cjhowe7.laravel-blade \
+    && code --install-extension dbaeumer.vscode-eslint \
+    && code --install-extension Equinusocio.vsc-community-material-theme \
+    && code --install-extension Equinusocio.vsc-material-theme \
+    && code --install-extension equinusocio.vsc-material-theme-icons \
+    && code --install-extension junstyle.php-cs-fixer \
+    && code --install-extension MehediDracula.php-namespace-resolver \
+    && code --install-extension ms-mssql.mssql \
+    && code --install-extension naumovs.color-highlight \
+    && code --install-extension neilbrayfield.php-docblocker \
+    && code --install-extension octref.vetur \
+    && code --install-extension onecentlin.laravel-blade \
+    && code --install-extension PKief.material-icon-theme \
+    && code --install-extension Prisma.vscode-graphql \
+    && code --install-extension robinbentley.sass-indented \
+    && code --install-extension sasa.vscode-sass-format \
+    && code --install-extension whatwedo.twig \
+    && code --install-extension wix.vscode-import-cost
