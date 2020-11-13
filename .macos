@@ -266,7 +266,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Down
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
 # defaults write com.apple.finder ShowStatusBar -bool true
@@ -370,7 +370,7 @@ defaults write com.apple.dock tilesize -int 36
 defaults write com.apple.dock mineffect -string "scale"
 
 # Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
+defaults write com.apple.dock minimize-to-application -bool false
 
 # Enable spring loading for all Dock items
 # defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true

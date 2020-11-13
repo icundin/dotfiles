@@ -1,10 +1,11 @@
 # Shortcuts
+alias aliases="subl ~/.dotfiles/aliases.zsh"
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias reloadshell="source $HOME/.zshrc"
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-directories-first"
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
+#alias phpstorm='open -a ~/Applications/JetBrains\ Toolbox/PhpStorm.app ./'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
@@ -54,7 +55,16 @@ alias gb="git branch"
 alias gc="git checkout"
 alias gl="git log --oneline --decorate --color"
 alias amend="git add . && git commit --amend --no-edit"
-alias commit="git add . && git commit -m"
+#alias commit="git add . && git commit -m"
+function commit() {
+    commitMessage="$1"
+    if ["$commitMessage" = ""]
+    then
+        commitMessage="wip"
+    fi
+    git add .
+    eval "git commit -a -m '${commitMessage}'"
+}
 alias diff="git diff"
 alias force="git push --force"
 alias nuke="git clean -df && git reset --hard"
@@ -65,3 +75,7 @@ alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
 alias wip="commit wip"
+
+# PHP Unit Testing
+alias pu="vendor/bin/phpunit"
+alias pest="vendor/bin/pest"

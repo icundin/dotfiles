@@ -79,7 +79,10 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,6 +103,9 @@ export LANG=es_ES.UTF-8
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+
+# Fix zsh hyperjs % symbol
+unsetopt PROMPT_SP
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
